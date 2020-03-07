@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private RecipeDefinition[] _recipeDefinitions;
     [SerializeField] private float _speed = 2f;
     private IInteractable _availableInteraction;
     public Inventory Inventory { get; private set; }
     public ResourceBag ResourceBag { get; private set; }
+    public RecipeBook RecipeBook { get; private set; }
     
     private void Awake()
     {
         Inventory = GetComponent<Inventory>();
         ResourceBag = new ResourceBag();
+        RecipeBook = new RecipeBook(_recipeDefinitions);
         
         ResourceBag.AddResources(Resources.White, 100);
         ResourceBag.AddResources(Resources.Green, 100);
@@ -29,10 +32,10 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxisRaw("Vertical");
 
-        transform.position += Time.deltaTime * _speed * new Vector3(horizontal, vertical);
+        transform.position += Time.deltaTime * _speed * new Vector3(horizontal, vertical).normalized;
     }
 
     public void SetInteraction(IInteractable interactable)

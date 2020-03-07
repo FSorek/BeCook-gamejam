@@ -5,29 +5,35 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private RecipeDefinition[] _recipeDefinition;
-    
-    public List<Recipe> Recipes { get; private set; } = new List<Recipe>();
     private List<Item> _items = new List<Item>();
-    
-    private void Awake()
+
+    public void AddItem(Item item)
     {
-        DirtyRecipeSetUp();
+        _items.Add(item);
+    }
+}
+
+public class RecipeBook
+{
+    public List<Recipe> Recipes { get; } = new List<Recipe>();
+
+    public RecipeBook(RecipeDefinition[] recipeDefinitions) 
+    {
+        DirtyRecipeSetUp(recipeDefinitions);
     }
 
-    private void DirtyRecipeSetUp()
+    public void AddRecipe(Recipe recipe)
     {
-        foreach (var recipeDefinition in _recipeDefinition)
+        Recipes.Add(recipe);
+    }
+    private void DirtyRecipeSetUp(RecipeDefinition[] recipeDefinitions)
+    {
+        foreach (var recipeDefinition in recipeDefinitions)
         {
             var recipe = recipeDefinition.GetRecipe();
             Recipes.Add(recipe);
             
             Debug.Log(recipe.Name);
         }
-    }
-
-    public void AddItem(Item item)
-    {
-        _items.Add(item);
     }
 }

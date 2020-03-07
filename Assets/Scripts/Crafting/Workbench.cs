@@ -13,7 +13,7 @@ public class Workbench : MonoBehaviour, IInteractable
     public void Use()
     {
         Debug.Log($"Used {gameObject.name}.");
-        var recipe = _player.Inventory.Recipes[0];
+        var recipe = _player.RecipeBook.Recipes[0];
 
         var canCraft = recipe.CanCraft(_player.ResourceBag.CurrentResources);
 
