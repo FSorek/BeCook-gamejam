@@ -7,6 +7,17 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed = 2f;
     private IInteractable _availableInteraction;
+    public Inventory Inventory { get; private set; }
+    public ResourceBag ResourceBag { get; private set; }
+    
+    private void Awake()
+    {
+        Inventory = GetComponent<Inventory>();
+        ResourceBag = new ResourceBag();
+        
+        ResourceBag.AddResources(Resources.White, 100);
+        ResourceBag.AddResources(Resources.Green, 100);
+    }
 
     private void Update()
     {

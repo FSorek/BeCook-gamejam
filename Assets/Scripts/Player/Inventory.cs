@@ -1,48 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Items;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private int _startWhite;
-    [SerializeField] private int _startGreen;
-
     [SerializeField] private RecipeDefinition[] _recipeDefinition;
     
-    private Dictionary<Resources, int> _resources = new Dictionary<Resources, int>();
-    private List<Recipe> _recipes = new List<Recipe>();
+    public List<Recipe> Recipes { get; private set; } = new List<Recipe>();
+    private List<Item> _items = new List<Item>();
     
     private void Awake()
     {
-        DirtyResourcesSetUp();
         DirtyRecipeSetUp();
-    }
-
-    public void AddResources(Resources type, int amount)
-    {
-        if (amount <= 0)
-        {
-            Debug.LogWarning("add need to be positive");
-            return;
-        }
-
-        _resources[type] += amount;
-    }
-
-    public void RemoveResources(Resources type, int amount)
-    {
-        if (amount <= 0)
-        {
-            Debug.LogWarning("add need to be positive");
-            return;
-        }
-
-        if (_resources[type] < amount)
-        {
-            Debug.LogWarning("you try to remove too much");
-        }
-        
-        _resources[type] -= amount;
     }
 
     private void DirtyRecipeSetUp()
@@ -50,15 +20,14 @@ public class Inventory : MonoBehaviour
         foreach (var recipeDefinition in _recipeDefinition)
         {
             var recipe = recipeDefinition.GetRecipe();
-            _recipes.Add(recipe);
+            Recipes.Add(recipe);
             
             Debug.Log(recipe.Name);
         }
     }
 
-    private void DirtyResourcesSetUp()
+    public void AddItem(Item item)
     {
-        _resources.Add(Resources.White, _startWhite);
-        _resources.Add(Resources.Green, _startGreen);
+        _items.Add(item);
     }
 }

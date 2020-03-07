@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Items;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "RecipeDefinition")]
@@ -7,6 +8,7 @@ public class RecipeDefinition : ScriptableObject
 {
     [SerializeField] private List<ResourceAmount> _resourceAmounts;
     [SerializeField] private string _name;
+    [SerializeField] private ItemDefinition _itemDefinition;
     
     public Recipe GetRecipe()
     {
@@ -17,7 +19,7 @@ public class RecipeDefinition : ScriptableObject
             dictionaryRecipe.Add(resourceAmount.Resource,resourceAmount.Amount);
         }
         
-        var recipe = new Recipe(dictionaryRecipe,_name);
+        var recipe = new Recipe(dictionaryRecipe, _name, _itemDefinition);
         return recipe;
     }
 }
