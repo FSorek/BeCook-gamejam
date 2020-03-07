@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 243e607770484c108fe7fdc2de288103, type: 3}
   m_Name: ItemTest
   m_EditorClassIdentifier: 
-  _name: 
-  _durability: 0
+  _name: Item Test
+  _durability: 5
+  _itemType: 0

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _resourceAmounts:
   - resource: 0
-    amount: 0
-  - resource: 0
-    amount: 0
+    amount: 4
+  - resource: 1
+    amount: 5
   _name: RecipeTest2
+  _itemDefinition: {fileID: 0}
