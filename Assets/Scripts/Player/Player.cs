@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     
     private void Awake()
     {
-        Inventory = GetComponent<Inventory>();
+        Inventory = new Inventory();
         ResourceBag = new ResourceBag();
         RecipeBook = new RecipeBook(_recipeDefinitions);
         
