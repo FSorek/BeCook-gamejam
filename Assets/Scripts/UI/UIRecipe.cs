@@ -5,8 +5,11 @@ using UnityEngine.EventSystems;
 
 public class UIRecipe : MonoBehaviour, ISelectHandler
 {
-    [SerializeField] private TMP_Text _nameText;
     public static Action<Recipe> OnRecipeSelected = delegate {  };
+    
+    [SerializeField] private TMP_Text _nameText;
+    [SerializeField] private UIResource _uiResourcePrefab;
+    [SerializeField] private Transform _neededResourcesParent;
 
     private Recipe _assignedRecipe;
 
@@ -21,5 +24,10 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
         _assignedRecipe = recipe;
 
         _nameText.text = recipe.Name;
+        foreach (var resource in recipe.NeededResources)
+        {
+            UIResource resourceInstance = Instantiate(_uiResourcePrefab, _neededResourcesParent);
+            resourceInstance.Initialize(resource.Key, resource.Value);
+        }
     }
 }
