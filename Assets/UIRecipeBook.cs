@@ -4,7 +4,7 @@ using UnityEngine;
 public class UIRecipeBook : MonoBehaviour
 {
     [SerializeField] private RectTransform _bookContent;
-    [SerializeField] private GameObject _uiRecipePrefab;
+    [SerializeField] private UIRecipe _uiRecipePrefab;
     private void Start()
     {
         var player = FindObjectOfType<Player>();
@@ -18,7 +18,7 @@ public class UIRecipeBook : MonoBehaviour
 
     private void CreateUIRecipe(Recipe recipe)
     {
-        var uiRecipe = Instantiate(_uiRecipePrefab, _bookContent);
-        
+        UIRecipe uiRecipe = Instantiate(_uiRecipePrefab, _bookContent);
+        uiRecipe.Initialize(recipe);
     }
 }

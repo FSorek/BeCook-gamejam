@@ -1,10 +1,11 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 public class UIRecipe : MonoBehaviour, ISelectHandler
 {
+    [SerializeField] private TMP_Text _nameText;
     public static Action<Recipe> OnRecipeSelected = delegate {  };
 
     private Recipe _assignedRecipe;
@@ -13,5 +14,12 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
     {
         OnRecipeSelected(_assignedRecipe);
         Debug.Log("Selected a recipe.");
+    }
+
+    public void Initialize(Recipe recipe)
+    {
+        _assignedRecipe = recipe;
+
+        _nameText.text = recipe.Name;
     }
 }

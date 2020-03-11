@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bookContent: {fileID: 513197159226453251}
-  _uiRecipePrefab: {fileID: 8439425928370309942, guid: 7c7378b61f29bce4289cb87d640c2c26,
+  _uiRecipePrefab: {fileID: 4275813258063211349, guid: 7c7378b61f29bce4289cb87d640c2c26,
     type: 3}
 --- !u!1 &513197157710561673
 GameObject:
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 513197158204665891}
   m_Direction: 2
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.9984348
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -727,7 +727,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000004578303}
+  m_AnchoredPosition: {x: 0, y: 0.000030129224}
   m_SizeDelta: {x: 0, y: 358}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &513197159226453248
