@@ -7,11 +7,11 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
 {
     public static Action<Recipe> OnRecipeSelected = delegate {  };
 
-    private Recipe assignedRecipe;
+    private Recipe _assignedRecipe;
 
     public void OnSelect(BaseEventData eventData)
     {
-        OnRecipeSelected(assignedRecipe);
+        OnRecipeSelected(_assignedRecipe);
         Debug.Log("Selected a recipe.");
     }
 }
