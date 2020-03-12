@@ -1,8 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ResourceBag
 {
+    public event Action OnResourcesChanged; 
     public Dictionary<Resources, int> CurrentResources { get; } = new Dictionary<Resources, int>();
 
     public void AddResources(Resources type, int amount)
@@ -18,6 +20,7 @@ public class ResourceBag
             return;
         }
         CurrentResources[type] += amount;
+        OnResourcesChanged?.Invoke();
     }
 
     public void RemoveResources(Resources type, int amount)
@@ -34,5 +37,6 @@ public class ResourceBag
         }
         
         CurrentResources[type] -= amount;
+        OnResourcesChanged?.Invoke();
     }
 }
