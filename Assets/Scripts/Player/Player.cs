@@ -18,8 +18,8 @@ public class Player : MonoBehaviour
         ResourceBag = new ResourceBag();
         RecipeBook = new RecipeBook(_recipeDefinitions);
         
-        ResourceBag.AddResources(Resources.White, 100);
-        ResourceBag.AddResources(Resources.Green, 100);
+        ResourceBag.AddResources(Resources.White, 7);
+        ResourceBag.AddResources(Resources.Green, 7);
     }
 
     private void Update()
