@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536395437}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.24, y: 0.14, z: -0.6342147}
+  m_LocalPosition: {x: 0.2, y: 0.14, z: -0.6342147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 694629691}
@@ -433,6 +433,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _recipeDefinitions:
   - {fileID: 11400000, guid: 0cec5714979745e43958b8a131f45e9a, type: 2}
+  - {fileID: 11400000, guid: f0ab1a16fe8b1154ca551a6696368b3a, type: 2}
   _speed: 5
 --- !u!50 &1984593212
 Rigidbody2D:
@@ -479,7 +480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984593210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -3.41, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687336138}
