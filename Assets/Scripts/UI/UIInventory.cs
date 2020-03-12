@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using Items;
 using UnityEngine;
 
-public class UIInventory : MonoBehaviour
+public class UIInventory : MonoBehaviour,IOpenCloseUIPanel
 {
     [SerializeField]private UIInventorySlot[] _slots;
-
+    [SerializeField] private GameObject _inventoryPanel;
+    
     private Inventory _inventory;
-
     
     private void Start()//Inventory is create on player Awake
     {
@@ -39,5 +39,15 @@ public class UIInventory : MonoBehaviour
         if(findAvailableSlot==false)
             Debug.LogWarning("need more slot",this);
         
+    }
+
+    public void OpenUIPanel()
+    {
+        _inventoryPanel.SetActive(true);
+    }
+
+    public void CloseUIPanel()
+    {
+        _inventoryPanel.SetActive(false);
     }
 }
