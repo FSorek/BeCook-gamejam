@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIRecipeBook : MonoBehaviour
+public class UIRecipeBook : MonoBehaviour,IOpenCloseUIPanel
 {
     [SerializeField] private RectTransform _bookContent;
     [SerializeField] private UIRecipe _uiRecipePrefab;
-
+    [SerializeField] private GameObject _recipeBookPanel;
+    
     private RecipeBook _recipeBook;
     private ResourceBag _resourceBag;
 
     private List<UIRecipe> _uiRecipes=new List<UIRecipe>();
+    
     private void Start()
     {
         var player = FindObjectOfType<Player>();
@@ -44,5 +46,15 @@ public class UIRecipeBook : MonoBehaviour
         {
             uiRecipe.RefreshCanCraftState(_resourceBag);
         }
+    }
+
+    public void OpenUIPanel()
+    {
+        _recipeBookPanel.SetActive(true);
+    }
+
+    public void CloseUIPanel()
+    {
+        _recipeBookPanel.SetActive(false);
     }
 }
