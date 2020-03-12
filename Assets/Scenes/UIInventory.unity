@@ -644,6 +644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb87679057f1d7642b20a8e3ef62f984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _panel: {fileID: 1193481927}
   _slots:
   - {fileID: 37259794}
   - {fileID: 735002471}
@@ -670,7 +671,6 @@ MonoBehaviour:
   - {fileID: 1092289951}
   - {fileID: 2015922187}
   - {fileID: 267526864}
-  _inventoryPanel: {fileID: 1193481927}
 --- !u!114 &267526864 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 797763190388561036, guid: 143e627b3ab90ad409911e62d92b762e,
@@ -4379,7 +4379,6 @@ GameObject:
   - component: {fileID: 1923136966}
   - component: {fileID: 1923136965}
   - component: {fileID: 1923136964}
-  - component: {fileID: 1923136967}
   m_Layer: 5
   m_Name: ButtonOpenCloseInventory
   m_TagString: Untagged
@@ -4449,7 +4448,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1923136967}
+      - m_Target: {fileID: 255911993}
         m_MethodName: EnableDisablePanel
         m_Mode: 1
         m_Arguments:
@@ -4496,19 +4495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923136962}
   m_CullTransparentMesh: 0
---- !u!114 &1923136967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923136962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba3938e4a3edd64e9e0d2a716325a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panel: {fileID: 1193481927}
 --- !u!114 &1993381462 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 797763190388561036, guid: 143e627b3ab90ad409911e62d92b762e,

@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private RecipeDefinition[] _recipeDefinitions;
+    [SerializeField] private ResourceDefinition[] _resourceDefinitions;
     [SerializeField] private float _speed = 2f;
     private IInteractable _availableInteraction;
     public Inventory Inventory { get; private set; }
@@ -15,11 +16,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         Inventory = new Inventory();
-        ResourceBag = new ResourceBag();
+        ResourceBag = new ResourceBag(_resourceDefinitions);
         RecipeBook = new RecipeBook(_recipeDefinitions);
-        
-        ResourceBag.AddResources(Resources.White, 7);
-        ResourceBag.AddResources(Resources.Green, 7);
     }
 
     private void Update()

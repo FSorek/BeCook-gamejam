@@ -4,10 +4,9 @@ using System.Collections.Generic;
 using Items;
 using UnityEngine;
 
-public class UIInventory : MonoBehaviour,IOpenCloseUIPanel
+public class UIInventory : OpenClosePanel
 {
     [SerializeField]private UIInventorySlot[] _slots;
-    [SerializeField] private GameObject _inventoryPanel;
     
     private Inventory _inventory;
     
@@ -40,14 +39,5 @@ public class UIInventory : MonoBehaviour,IOpenCloseUIPanel
             Debug.LogWarning("need more slot",this);
         
     }
-
-    public void OpenUIPanel()
-    {
-        _inventoryPanel.SetActive(true);
-    }
-
-    public void CloseUIPanel()
-    {
-        _inventoryPanel.SetActive(false);
-    }
+    
 }

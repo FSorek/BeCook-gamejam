@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d56b0e4e9e3484794611ab14634b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _panel: {fileID: 1454545225}
   _uiWorkbenchPanel: {fileID: 1454545225}
   _activeUiRecipeParent: {fileID: 1052598798}
   _uiRecipePrefab: {fileID: 4275813258063211349, guid: 7c7378b61f29bce4289cb87d640c2c26,
@@ -607,7 +608,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1520059470}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 198203089}
+        m_MethodName: Craft
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1520059470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,7 +823,6 @@ GameObject:
   - component: {fileID: 2115295321}
   - component: {fileID: 2115295320}
   - component: {fileID: 2115295319}
-  - component: {fileID: 2115295322}
   m_Layer: 5
   m_Name: CloseButton
   m_TagString: Untagged
@@ -882,8 +893,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2115295322}
-        m_MethodName: EnableDisablePanel
+      - m_Target: {fileID: 198203089}
+        m_MethodName: CloseUIPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -929,16 +940,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115295317}
   m_CullTransparentMesh: 0
---- !u!114 &2115295322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2115295317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba3938e4a3edd64e9e0d2a716325a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panel: {fileID: 1454545225}

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIRecipeBook : MonoBehaviour,IOpenCloseUIPanel
+public class UIRecipeBook : OpenClosePanel
 {
     [SerializeField] private RectTransform _bookContent;
     [SerializeField] private UIRecipe _uiRecipePrefab;
-    [SerializeField] private GameObject _recipeBookPanel;
+
     
     private RecipeBook _recipeBook;
     private ResourceBag _resourceBag;
@@ -46,15 +46,5 @@ public class UIRecipeBook : MonoBehaviour,IOpenCloseUIPanel
         {
             uiRecipe.RefreshCanCraftState(_resourceBag);
         }
-    }
-
-    public void OpenUIPanel()
-    {
-        _recipeBookPanel.SetActive(true);
-    }
-
-    public void CloseUIPanel()
-    {
-        _recipeBookPanel.SetActive(false);
     }
 }

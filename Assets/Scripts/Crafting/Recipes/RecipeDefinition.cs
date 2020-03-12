@@ -12,11 +12,11 @@ public class RecipeDefinition : ScriptableObject
     
     public Recipe GetRecipe()
     {
-        var dictionaryRecipe = new Dictionary<Resources, int>();
+        var dictionaryRecipe = new Dictionary<ResourceType, int>();
         
         foreach (var resourceAmount in _resourceAmounts)
         {
-            dictionaryRecipe.Add(resourceAmount.Resource,resourceAmount.Amount);
+            dictionaryRecipe.Add(resourceAmount.ResourceType,resourceAmount.Amount);
         }
         
         var recipe = new Recipe(dictionaryRecipe, _name, _itemDefinition);

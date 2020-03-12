@@ -12,17 +12,17 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
     [SerializeField] private Transform _neededResourcesParent;
     [SerializeField] private GameObject _cantCraftImage;
 
-    private Recipe _assignedRecipe;
+    public Recipe AssignedRecipe { get; private set; }
 
     public void OnSelect(BaseEventData eventData)
     {
-        OnRecipeSelected(_assignedRecipe);
-        Debug.Log($"Selected {_assignedRecipe?.Name}");
+        OnRecipeSelected(AssignedRecipe);
+        Debug.Log($"Selected {AssignedRecipe?.Name}");
     }
 
     public void Initialize(Recipe recipe)
     {
-        _assignedRecipe = recipe;
+        AssignedRecipe = recipe;
 
         _nameText.text = recipe.Name;
         foreach (var resource in recipe.NeededResources)
@@ -34,7 +34,7 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
 
     public void RefreshCanCraftState(ResourceBag resourceBag)
     {
-        var canCraft = _assignedRecipe.CanCraft(resourceBag.CurrentResources);
+        var canCraft = AssignedRecipe.CanCraft(resourceBag.CurrentResources);
 
         _cantCraftImage.SetActive(!canCraft);
     }

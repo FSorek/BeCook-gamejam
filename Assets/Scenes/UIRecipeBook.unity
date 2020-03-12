@@ -170,10 +170,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7b366b79ccb1c49b94fa67979c5d2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _panel: {fileID: 1516907528}
   _bookContent: {fileID: 1666504990}
   _uiRecipePrefab: {fileID: 4275813258063211349, guid: 7c7378b61f29bce4289cb87d640c2c26,
     type: 3}
-  _recipeBookPanel: {fileID: 1516907528}
 --- !u!1 &713126077
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +252,6 @@ GameObject:
   - component: {fileID: 1444504458}
   - component: {fileID: 1444504457}
   - component: {fileID: 1444504456}
-  - component: {fileID: 1444504459}
   m_Layer: 5
   m_Name: ButtonOpenCloseRecipeBook
   m_TagString: Untagged
@@ -322,7 +321,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1444504459}
+      - m_Target: {fileID: 144262877}
         m_MethodName: EnableDisablePanel
         m_Mode: 1
         m_Arguments:
@@ -369,19 +368,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1444504454}
   m_CullTransparentMesh: 0
---- !u!114 &1444504459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1444504454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba3938e4a3edd64e9e0d2a716325a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panel: {fileID: 1516907528}
 --- !u!1 &1516907528 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 513197157708152221, guid: ed5d96c840fb70d46a7ce774e0951fdf,

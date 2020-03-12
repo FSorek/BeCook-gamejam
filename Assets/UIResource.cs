@@ -13,14 +13,14 @@ public class UIResource : MonoBehaviour
     [SerializeField] private Sprite _whiteSprite;
     [SerializeField] private Sprite _greenSprite;
 
-    public void Initialize(Resources type, int amount = 0)
+    public void Initialize(ResourceType type, int amount = 0)
     {
         switch (type)
         {
-            case Resources.White:
+            case ResourceType.White:
                 _backgroundImage.sprite = _whiteSprite;
                 break;
-            case Resources.Green:
+            case ResourceType.Green:
                 _backgroundImage.sprite = _greenSprite;
                 break;
         }

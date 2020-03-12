@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIWorkbench : MonoBehaviour,IOpenCloseUIPanel
+public class UIWorkbench : OpenClosePanel
 {
     [SerializeField] private GameObject _uiWorkbenchPanel;
-
-    [SerializeField]private Transform _activeUiRecipeParent;
+    [SerializeField] private Transform _activeUiRecipeParent;
     [SerializeField] private UIRecipe _uiRecipePrefab;
+
+    private Player _player;
     private UIRecipe _activeUiRecipe;
 
     private void Awake()
     {
         UIRecipe.OnRecipeSelected += ChangeActiveRecipe;
+        _player = FindObjectOfType<Player>();
     }
     
     private void OnDestroy()
@@ -29,20 +31,19 @@ public class UIWorkbench : MonoBehaviour,IOpenCloseUIPanel
         _activeUiRecipe = Instantiate(_uiRecipePrefab, _activeUiRecipeParent);
         _activeUiRecipe.Initialize(newActiveRecipe);
     }
-    
-    public void OpenUIPanel()
-    {
-        _uiWorkbenchPanel.SetActive(true);
-    }
 
-    public void CloseUIPanel()
+    public void Craft()
     {
-        _uiWorkbenchPanel.SetActive(false);
-
         if (_activeUiRecipe != null)
         {
-            Destroy(_activeUiRecipe.gameObject);
-            _activeUiRecipe = null;
+            bool canCraft = _activeUiRecipe.AssignedRecipe.CanCraft(_player.ResourceBag.CurrentResources);
+            if(!canCraft)
+                return;
+
+            _player.ResourceBag.RemoveResources(_activeUiRecipe.AssignedRecipe.NeededResources);
+            var itemToCraft = _activeUiRecipe.AssignedRecipe.ItemDefinition.GetItem();
+            
+            _player.Inventory.AddItem(itemToCraft);
         }
     }
 }

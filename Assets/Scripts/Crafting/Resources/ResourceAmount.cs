@@ -4,9 +4,9 @@ using UnityEngine;
 [Serializable]
 public struct ResourceAmount
 {
-    [SerializeField] private Resources resource;
+    [SerializeField] private ResourceType _resourceType;
     [SerializeField] private int amount;
     
-    public Resources Resource => resource;
+    public ResourceType ResourceType => _resourceType;
     public int Amount => amount;
 }
