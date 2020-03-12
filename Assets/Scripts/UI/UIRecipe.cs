@@ -10,6 +10,7 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private UIResource _uiResourcePrefab;
     [SerializeField] private Transform _neededResourcesParent;
+    [SerializeField] private GameObject _cantCraftImage;
 
     private Recipe _assignedRecipe;
 
@@ -29,5 +30,12 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
             UIResource resourceInstance = Instantiate(_uiResourcePrefab, _neededResourcesParent);
             resourceInstance.Initialize(resource.Key, resource.Value);
         }
+    }
+
+    public void RefreshCanCraftState(ResourceBag resourceBag)
+    {
+        var canCraft = _assignedRecipe.CanCraft(resourceBag.CurrentResources);
+
+        _cantCraftImage.SetActive(!canCraft);
     }
 }
