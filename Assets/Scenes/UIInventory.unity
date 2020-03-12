@@ -4380,7 +4380,7 @@ GameObject:
   - component: {fileID: 1923136964}
   - component: {fileID: 1923136967}
   m_Layer: 5
-  m_Name: ButtonOpenInventory
+  m_Name: ButtonOpenCloseInventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4449,7 +4449,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1923136967}
-        m_MethodName: OpenCloseInventoryPanel
+        m_MethodName: EnableDisablePanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4507,7 +4507,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba3938e4a3edd64e9e0d2a716325a5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventoryPanel: {fileID: 1193481927}
+  _panel: {fileID: 1193481927}
 --- !u!114 &1993381462 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 797763190388561036, guid: 143e627b3ab90ad409911e62d92b762e,
