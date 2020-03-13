@@ -48,7 +48,7 @@ public class ResourceBag
         OnResourcesChanged?.Invoke();
     }
 
-    public void RemoveResources(Dictionary<ResourceType, int> resources)
+    public void RemoveResources(Dictionary<ResourceDefinition, int> resources)
     {
         foreach (var resource in resources)
         {
@@ -58,7 +58,7 @@ public class ResourceBag
                 return;
             }
 
-            CurrentResources[resource.Key].Amount -= resource.Value;
+            CurrentResources[resource.Key.Type].Amount -= resource.Value;
         }
         OnResourcesChanged?.Invoke();
     }
