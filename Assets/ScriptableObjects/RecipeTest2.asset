@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RecipeTest2
   m_EditorClassIdentifier: 
   _resourceAmounts:
-  - resource: 0
+  - _resourceType: 0
     amount: 4
-  - resource: 1
+  - _resourceType: 0
     amount: 5
   _name: RecipeTest2
-  _itemDefinition: {fileID: 11400000, guid: 2e4b3e0fb5205774cb588711bdbf9d95, type: 2}
+  _itemDefinition: {fileID: 11400000, guid: e71889e4354edc34182511ecf3a6b845, type: 2}

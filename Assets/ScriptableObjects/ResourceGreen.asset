@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ff7fb37ac04c8ca48e4377165f5408, type: 3}
   m_Name: ResourceGreen
   m_EditorClassIdentifier: 
-  _displayName: 
-  _icon: {fileID: 0}
-  _type: 0
-  _startingAmount: 0
+  _displayName: Green
+  _icon: {fileID: 21300000, guid: 993191d33620ca54386a18ebb2dd32e2, type: 3}
+  _type: 1
+  _startingAmount: 7
