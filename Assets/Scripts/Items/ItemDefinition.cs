@@ -10,6 +10,8 @@ namespace Items
         [SerializeField] private int _durability;
         [SerializeField] private ItemType _itemType;
         [SerializeField] private Sprite _sprite;
+
+        public Sprite Sprite => _sprite;
         public Item GetItem()
         {
             var item = new Item(_name,_sprite, _durability);
