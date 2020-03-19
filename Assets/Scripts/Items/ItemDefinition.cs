@@ -14,7 +14,7 @@ namespace Items
         public Sprite Sprite => _sprite;
         public Item GetItem()
         {
-            var item = new Item(_name,_sprite, _durability);
+            var item = new Item(_name,_sprite,_itemType ,_durability);
             return item;
         }
     }
