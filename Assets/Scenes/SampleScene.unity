@@ -434,6 +434,9 @@ MonoBehaviour:
   _recipeDefinitions:
   - {fileID: 11400000, guid: 0cec5714979745e43958b8a131f45e9a, type: 2}
   - {fileID: 11400000, guid: f0ab1a16fe8b1154ca551a6696368b3a, type: 2}
+  _resourceDefinitions:
+  - {fileID: 11400000, guid: 79016282811a9c345a84f0becffcafbe, type: 2}
+  - {fileID: 11400000, guid: 360b4af37725186428df2cfc1c2effaf, type: 2}
   _speed: 5
 --- !u!50 &1984593212
 Rigidbody2D:

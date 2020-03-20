@@ -8,11 +8,9 @@ namespace Items
     public class Item
     {
         public string Name { get; }
-        
         public Sprite Sprite { get; }
         public int Durability { get; }
-
-        public Item(string name,Sprite sprite, int durability)
+        public Item(string name, Sprite sprite, int durability)
         {
             Name = name;
             Sprite = sprite;
