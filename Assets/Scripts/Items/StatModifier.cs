@@ -4,14 +4,14 @@ using UnityEngine;
 [Serializable]
 public class StatModifier
 {
-    [SerializeField] private StatType _statType;
+    [SerializeField] private StatType _statToModify;
     [SerializeField] private float _value;
-    public StatType StatType => _statType;
+    public StatType StatToModify => _statToModify;
     public float Value => _value;
 
-    public StatModifier(int value, StatType statType)
+    public StatModifier(int value, StatType statToModify)
     {
-        _statType = statType;
+        _statToModify = statToModify;
         _value = value;
     }
 

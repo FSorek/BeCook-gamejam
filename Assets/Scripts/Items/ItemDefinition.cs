@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace Items
 {
@@ -10,9 +10,11 @@ namespace Items
         [SerializeField] private int _durability;
         [SerializeField] private ItemType _itemType;
         [SerializeField] private Sprite _sprite;
+        [SerializeField] private List<StatModifier> _statModifiers;
+
         public Item GetItem()
         {
-            var item = new Item(_name,_sprite, _durability);
+            var item = new Item(_name,_sprite, _durability, _itemType, _statModifiers);
             return item;
         }
     }

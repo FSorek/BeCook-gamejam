@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +11,16 @@ namespace Items
         public string Name { get; }
         public Sprite Sprite { get; }
         public int Durability { get; }
-        public Item(string name, Sprite sprite, int durability)
+        public ItemType ItemType { get; }
+        public List<StatModifier> StatModifiers { get; }
+
+        public Item(string name, Sprite sprite, int durability, ItemType itemType, List<StatModifier> statModifiers)
         {
             Name = name;
             Sprite = sprite;
             Durability = durability;
+            ItemType = itemType;
+            StatModifiers = statModifiers;
         }
     }
 }
