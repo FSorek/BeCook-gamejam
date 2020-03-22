@@ -11,7 +11,7 @@ namespace Items
         [SerializeField] private ItemType _itemType;
         [SerializeField] private Sprite _sprite;
         [SerializeField] private List<StatModifier> _statModifiers;
-
+        public Sprite Sprite => _sprite;
         public Item GetItem()
         {
             var item = new Item(_name,_sprite, _durability, _itemType, _statModifiers);

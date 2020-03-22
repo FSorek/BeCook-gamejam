@@ -3,11 +3,11 @@ using Items;
 
 public class Recipe
 {
-    public Dictionary<ResourceType, int> NeededResources { get; }
+    public Dictionary<ResourceDefinition, int> NeededResources { get; }
     public string Name { get; }
     public ItemDefinition ItemDefinition { get; }
     
-    public Recipe(Dictionary<ResourceType, int> neededResources, string name, ItemDefinition itemDefinition)
+    public Recipe(Dictionary<ResourceDefinition, int> neededResources, string name, ItemDefinition itemDefinition)
     {
         NeededResources = neededResources;
         Name = name;
@@ -18,9 +18,9 @@ public class Recipe
     {
         foreach (var neededResource in NeededResources)
         {
-            if (availableResources.ContainsKey(neededResource.Key))
+            if (availableResources.ContainsKey(neededResource.Key.Type))
             {
-                if (neededResource.Value > availableResources[neededResource.Key].Amount)
+                if (neededResource.Value > availableResources[neededResource.Key.Type].Amount)
                 {
                     return false;
                 }

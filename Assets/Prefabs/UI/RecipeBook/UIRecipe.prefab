@@ -628,4 +628,5 @@ MonoBehaviour:
   _uiResourcePrefab: {fileID: 1726673294069777281, guid: 1a839ce17639d5a4fbd0aa890bad7d55,
     type: 3}
   _neededResourcesParent: {fileID: 8439425927501577874}
+  _image: {fileID: 8439425927044151187}
   _cantCraftImage: {fileID: 8390300743871324494}
