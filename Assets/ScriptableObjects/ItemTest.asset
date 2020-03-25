@@ -16,3 +16,6 @@ MonoBehaviour:
   _durability: 2
   _itemType: 2
   _sprite: {fileID: 21300000, guid: e6e472f860596b741a99d79f86c0dbcd, type: 3}
+  _statModifiers:
+  - _statToModify: 0
+    _value: 2
