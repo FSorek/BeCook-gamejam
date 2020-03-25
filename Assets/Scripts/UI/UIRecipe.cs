@@ -20,7 +20,6 @@ public class UIRecipe : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData eventData)
     {
         OnRecipeSelected(AssignedRecipe);
-        Debug.Log($"Selected {AssignedRecipe?.Name}");
     }
 
     public void Initialize(Recipe recipe)
