@@ -121,6 +121,54 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &507664863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 507664865}
+  - component: {fileID: 507664864}
+  m_Layer: 0
+  m_Name: Adventurers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &507664864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507664863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6f209211574891a09bd25a04802582, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _adventurersDefinitions:
+  - {fileID: 11400000, guid: f36bd33dcc7336746ab14279c6bbceaa, type: 2}
+  - {fileID: 11400000, guid: 83a6fdda1aecb8748846ca2dd39b8745, type: 2}
+  - {fileID: 11400000, guid: 25d3ba4c6fdb8644cb0e819544857e66, type: 2}
+  - {fileID: 11400000, guid: c0142689ac7ee18439895014f3f0c10d, type: 2}
+--- !u!4 &507664865
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507664863}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +482,7 @@ MonoBehaviour:
   _recipeDefinitions:
   - {fileID: 11400000, guid: 0cec5714979745e43958b8a131f45e9a, type: 2}
   - {fileID: 11400000, guid: f0ab1a16fe8b1154ca551a6696368b3a, type: 2}
+  - {fileID: 11400000, guid: 5f11daf9a36ddd0459b00bf8605b6ba0, type: 2}
   _resourceDefinitions:
   - {fileID: 11400000, guid: 360b4af37725186428df2cfc1c2effaf, type: 2}
   - {fileID: 11400000, guid: 79016282811a9c345a84f0becffcafbe, type: 2}
@@ -483,7 +532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1984593210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.41, y: 0, z: 0}
+  m_LocalPosition: {x: -0.593, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 687336138}
