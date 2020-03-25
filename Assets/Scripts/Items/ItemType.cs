@@ -4,7 +4,8 @@
     {
         Weapon,
         Armor,
-        Accessory,
-        Artifact
+        Relic,
+        //Accessory,
+        //Artifact
     }
 }
