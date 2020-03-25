@@ -24,5 +24,23 @@ namespace Items
             ItemType = itemType;
             StatModifiers = statModifiers;
         }
+
+        public void Equip(IHaveStats user)
+        {
+            foreach (var statModifier in StatModifiers)
+            {
+                var userStat = user.GetStat(statModifier.StatToModify);
+                userStat?.AddModifier(statModifier);
+            }
+        }
+
+        public void Unequip(IHaveStats user)
+        {
+            foreach (var statModifier in StatModifiers)
+            {
+                var userStat = user.GetStat(statModifier.StatToModify);
+                userStat?.RemoveModifier(statModifier);
+            }
+        }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class StatModifier
 {
     [SerializeField] private StatType _statToModify;
-    [SerializeField] private float _value;
+    [SerializeField][Range(0,1)] private float _value;
     public StatType StatToModify => _statToModify;
     public float Value => _value;
 
