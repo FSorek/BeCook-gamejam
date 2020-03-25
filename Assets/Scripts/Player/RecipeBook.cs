@@ -22,8 +22,6 @@ public class RecipeBook
         {
             var recipe = recipeDefinition.GetRecipe();
             AddRecipe(recipe);
-
-            Debug.Log(recipe.Name);
         }
     }
 }
