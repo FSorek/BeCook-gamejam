@@ -17,8 +17,7 @@ public class InteractionZone : MonoBehaviour
         var player = other.GetComponent<Player>();
         if(player == null)
             return;
-
-        Debug.Log("Player entered zone");
+        
         player.SetInteraction(_parentInteractable);
     }
 
