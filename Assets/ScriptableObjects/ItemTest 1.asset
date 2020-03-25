@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Item Test 1
   _durability: 5
-  _itemType: 0
+  _itemType: 1
   _sprite: {fileID: 21300000, guid: 2463c5e25efd94040b60558c14c1faea, type: 3}
