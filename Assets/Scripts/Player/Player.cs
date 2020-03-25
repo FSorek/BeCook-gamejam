@@ -8,11 +8,12 @@ public class Player : MonoBehaviour
     [SerializeField] private RecipeDefinition[] _recipeDefinitions;
     [SerializeField] private ResourceDefinition[] _resourceDefinitions;
     [SerializeField] private float _speed = 2f;
+    
     private IInteractable _availableInteraction;
     public Inventory Inventory { get; private set; }
     public ResourceBag ResourceBag { get; private set; }
     public RecipeBook RecipeBook { get; private set; }
-    
+
     public InventoryController InventoryController { get; private set; }
     
     private void Awake()

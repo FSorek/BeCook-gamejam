@@ -484,8 +484,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f0ab1a16fe8b1154ca551a6696368b3a, type: 2}
   - {fileID: 11400000, guid: 5f11daf9a36ddd0459b00bf8605b6ba0, type: 2}
   _resourceDefinitions:
-  - {fileID: 11400000, guid: 360b4af37725186428df2cfc1c2effaf, type: 2}
   - {fileID: 11400000, guid: 79016282811a9c345a84f0becffcafbe, type: 2}
+  - {fileID: 11400000, guid: 360b4af37725186428df2cfc1c2effaf, type: 2}
   _speed: 5
 --- !u!50 &1984593212
 Rigidbody2D:
