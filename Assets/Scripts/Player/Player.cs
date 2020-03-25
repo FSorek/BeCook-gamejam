@@ -13,11 +13,14 @@ public class Player : MonoBehaviour
     public ResourceBag ResourceBag { get; private set; }
     public RecipeBook RecipeBook { get; private set; }
     
+    public InventoryController InventoryController { get; private set; }
+    
     private void Awake()
     {
         Inventory = new Inventory();
         ResourceBag = new ResourceBag(_resourceDefinitions);
         RecipeBook = new RecipeBook(_recipeDefinitions);
+        InventoryController = new InventoryController(Inventory);
     }
 
     private void Update()
